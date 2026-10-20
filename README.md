@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 # 🚀 AirGap-RAG (AMD Match 3 Edition)
@@ -53,3 +54,6 @@
 ├── Dockerfile          # Offline ROCm-enabled container setup[cite: 5]
 ├── requirements.txt    # Production dependencies[cite: 5]
 └── README.md           # Documentation
+=======
+# ZeroNet-RAG
+>>>>>>> e58b34dc8281ca8a1e96285e3d0e3f809c623ea4
