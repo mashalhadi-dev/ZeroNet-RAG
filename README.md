@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 <div align="center">
 
-# 🚀 AirGap-RAG (AMD Match 3 Edition)
+# 🚀 ZeroNet-RAG (AMD Match 3 Edition)
 ### *Production-Ready, Offline & Fail-Closed Agentic RAG Framework*
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
@@ -18,11 +17,11 @@
 
 ## 💡 Key Highlights
 
-* 🔒 **Air-Gapped & Fully Offline (`--network none`):** Zero external API dependencies or cloud calls during runtime.
-* 🎯 **Cite-or-Refuse Policy:** Strictly avoids hallucinations. If no direct evidence is found in the corpus, it gracefully returns empty answers and citations (`{"answer":"","citations":[]}`).
-* ⚡ **High Efficiency Hybrid Search:** Combines **BM25 lexical ranking** with **sparse feature hashing** for ultra-fast indexing (<10 min) and sub-second query retrieval[cite: 5].
-* 📄 **Multi-Format Document Parsing:** Ingests PDF, DOCX, CSV, XLSX, Text Logs, and Images (via OCR) with robust error-handling that automatically skips corrupted or encrypted files[cite: 5].
-* 🔄 **LangGraph Workflow Integration:** Uses a state-based architecture (Planner ➔ Retriever ➔ Extractive Generator ➔ Guardrail) with an automatic sequential fallback[cite: 5].
+- 🔒 **Air-Gapped & Fully Offline (`--network none`):** Zero external API dependencies or cloud calls during runtime.
+- 🎯 **Cite-or-Refuse Policy:** Strictly avoids hallucinations. If no direct evidence is found in the corpus, it gracefully returns empty answers and citations (`{"answer":"","citations":[]}`).
+- ⚡ **High Efficiency Hybrid Search:** Combines **BM25 lexical ranking** with **sparse feature hashing** for ultra-fast indexing (<10 min) and sub-second query retrieval[cite: 5].
+- 📄 **Multi-Format Document Parsing:** Ingests PDF, DOCX, CSV, XLSX, Text Logs, and Images (via OCR) with robust error-handling that automatically skips corrupted or encrypted files[cite: 5].
+- 🔄 **LangGraph Workflow Integration:** Uses a state-based architecture (Planner ➔ Retriever ➔ Extractive Generator ➔ Guardrail) with an automatic sequential fallback[cite: 5].
 
 ---
 
@@ -35,7 +34,7 @@
 | **Search & Indexing** | Deterministic Sparse Feature Hashing + BM25 Lexical Ranking (`rank-bm25`)[cite: 5] |
 | **Parsers & Ingestion** | PyMuPDF (`pypdf`), `python-docx`, `openpyxl`, PyTesseract (OCR)[cite: 5] |
 | **Contract Validation** | Pydantic & Standard JSON Formatter[cite: 4, 5] |
-| **Containerization** | Docker (`rocm/pytorch:rocm6.2_ubuntu22.04`)[cite: 5, 7] |
+| **Containerization** | Docker (`python:3.10-slim`)[cite: 5] |
 
 ---
 
@@ -51,9 +50,6 @@
 │   ├── guardrail.py    # Fail-closed citation and lexical support validator[cite: 5]
 │   └── agent.py        # LangGraph state workflow with fallback execution[cite: 5]
 ├── app.py              # Main CLI entry point handling --index and --query[cite: 5]
-├── Dockerfile          # Offline ROCm-enabled container setup[cite: 5]
+├── Dockerfile          # Offline container setup[cite: 5]
 ├── requirements.txt    # Production dependencies[cite: 5]
 └── README.md           # Documentation
-=======
-# ZeroNet-RAG
->>>>>>> e58b34dc8281ca8a1e96285e3d0e3f809c623ea4
